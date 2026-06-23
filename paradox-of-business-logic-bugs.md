@@ -140,9 +140,7 @@ These questions have led me to far more findings than any payload list ever has.
 
 ## Final Thoughts
 
-Business logic bugs are difficult to find because they are rarely visible from individual requests.
-
-They emerge from relationships between workflows, assumptions, and unexpected user behavior.
+Business logic bugs are difficult to find because they are rarely visible from individual requests. They emerge from relationships between workflows, assumptions, and unexpected user behavior.
 
 In my opinion, the most effective way to discover them is not to think like a vulnerability scanner.
 
