@@ -56,7 +56,7 @@ Some frameworks honor these headers to change the HTTP method. A **POST** reques
 
 ---
 
-There are many more HTTP headers that can contribute to security vulnerabilities, but covering every possible case is beyond the scope of this paper. I encourage readers to explore the further reading resources below for a more comprehensive understanding of header-based security issues.
+There are many more HTTP headers that can contribute to security vulnerabilities, but covering every possible case is not possible. I encourage readers to explore the further reading resources below for a more comprehensive understanding of header-based security issues.
 
 Vulnerabilities are often not caused by the header itself, but by inconsistent interpretation of the same header across multiple components.
 
@@ -69,3 +69,8 @@ A good testing approach is to identify whether the application is behind a rever
 ## Conclusion
 
 HTTP request headers appear simple, but they frequently influence routing, authentication, client identification, and URL generation. Many high-severity vulnerabilities originate not from complex code, but from misplaced trust in user-controlled headers. Understanding how each layer of an application processes these headers is therefore an essential skill for both security researchers and developers. Proper validation, consistent parsing across infrastructure components, and avoiding security decisions based solely on client-supplied headers significantly reduce the risk of these attacks.
+
+## Further Reading
+
+* [HTTP headers - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers)
+* [HTTP Host header attacks | Web Security Academy](https://portswigger.net/web-security/host-header)
