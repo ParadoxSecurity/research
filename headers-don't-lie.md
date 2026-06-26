@@ -4,7 +4,7 @@
 
 <img width="1585" height="733" alt="git1" src="https://github.com/user-attachments/assets/7a25282f-5f23-43e7-b4c2-799518844e54" />
 
-In the above report, the researcher used the `X-Rewrite-URL` header to bypass a front-end Nginx restriction that returned **403 Forbidden** when accessing the `/admin/login` path. Instead of requesting the protected endpoint directly, the request was sent to an allowed path while the real destination was placed inside the `X-Rewrite-URL` header. The front-end server ignored this header, but the back-end application processed it and routed the request to the restricted endpoint.
+In the above report [Clario | Report #737323](https://hackerone.com/reports/737323) , the researcher used the `X-Rewrite-URL` header to bypass a front-end Nginx restriction that returned **403 Forbidden** when accessing the `/admin/login` path. Instead of requesting the protected endpoint directly, the request was sent to an allowed path while the real destination was placed inside the `X-Rewrite-URL` header. The front-end server ignored this header, but the back-end application processed it and routed the request to the restricted endpoint.
 
 This behavior also applies to `X-Original-URL`, which is supported by several frameworks for URL rewriting. When security controls are enforced only at the reverse proxy or web server, but the back-end trusts these headers, an attacker may be able to bypass access controls. This type of issue exists because different components in the request chain interpret HTTP headers differently.
 
